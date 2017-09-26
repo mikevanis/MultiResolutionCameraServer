@@ -18,9 +18,11 @@ Simply run the script with Python.
         python MultiResolutionCameraServer.py
 
 You can then access the high resolution stream at:
+
         raspberrypi.local:9090/hrs.mjpg
 
 ... and the low resolution stream at:
+
         raspberrypi.local:9090/lrs.mjpg
 
 Be sure to replace `raspberrypi.local` with whatever hostname the Pi has been given. 

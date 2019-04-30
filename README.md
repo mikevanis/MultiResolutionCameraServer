@@ -1,6 +1,6 @@
 # MultiResolutionCameraServer
 
-This is a unit test that captures two video streams from a Pi Camera at multiple resolutions and serves them as .mjpg files through a threaded HTTP server. Part of the Naturewatch project in collaboration with the Royal College of Art.
+This is a unit test that captures two video streams from a Pi Camera at multiple resolutions and serves them as .mjpg files through a threaded HTTP server. Part of the Naturewatch project.
 
 ## System requirements
 

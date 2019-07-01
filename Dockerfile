@@ -2,6 +2,7 @@ FROM sgtwilko/rpi-raspbian-opencv:stretch-latest
 
 # Install python requirements
 RUN pip install picamera
+RUN pip3 install picamera
 
 # Bundle source
 COPY . .
@@ -10,4 +11,4 @@ COPY . .
 EXPOSE 9090
 
 # Run
-CMD ["python", "MultiResolutionCameraServer.py"]
+CMD ["python3", "MultiResolutionCameraServer.py"]

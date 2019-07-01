@@ -7,6 +7,7 @@ import cv2
 from threading import Thread
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from SocketServer import ThreadingMixIn
+from __future__ import print_function
 
 # Multiple resolution setup
 camera = PiCamera()
@@ -21,7 +22,7 @@ time.sleep(0.5)
 
 class CamHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
-		print self.path
+		print(self.path)
 		if self.path.endswith("lrs.mjpg"):
 			self.send_response(200)
 			self.send_header('Content-type', 'multipart/x-mixed-replace; boundary=--jpgboundary')
@@ -64,7 +65,7 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
 def main():
 	try:
 		server = ThreadedHTTPServer(('', 9090), CamHandler)
-		print "Server started."
+		print("Server started.")
 		server.serve_forever()
 	except (KeyboardInterrupt, SystemExit):
 		camera.close()

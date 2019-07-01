@@ -11,4 +11,4 @@ COPY . .
 EXPOSE 9090
 
 # Run
-CMD ["python3", "MultiResolutionCameraServer.py"]
+CMD ["python", "MultiResolutionCameraServer.py"]
